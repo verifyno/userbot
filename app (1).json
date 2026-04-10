@@ -1,0 +1,39 @@
+{
+  "name": "Telegram Userbot",
+  "description": "A simple Telethon-based Telegram userbot that updates your profile name with a custom emoji on startup.",
+  "keywords": ["telegram", "userbot", "telethon", "python"],
+  "repository": "https://github.com/your-username/telegram-userbot",
+  "author": "Your Name",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram App API ID from my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram App API Hash from my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Telethon StringSession — generate it locally by running generate_session.py",
+      "value": "",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  },
+  "addons": [],
+  "scripts": {
+    "postdeploy": "echo 'Userbot deployed! Check logs: heroku logs --tail'"
+  }
+}
