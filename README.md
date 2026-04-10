@@ -54,8 +54,8 @@ heroku login
 heroku create your-app-name
 
 # Set config vars
-heroku config:set API_ID=35057620
-heroku config:set API_HASH=010824c75f6d2116f660933cf4536d20
+heroku config:set API_ID=xxxxxxxx
+heroku config:set API_HASH=xxxxxxxxxyyyyyyyyyzzzzzzzzzz
 heroku config:set STRING_SESSION=your_string_session_here
 
 # Deploy
